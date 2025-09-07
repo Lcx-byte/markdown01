@@ -15,7 +15,7 @@
 - 配置环境变量后，系统才有找到文件的路径
 
 # Task3
-![命令行截图](C:\markdown\Java01.png)
+![alt text](image.png)
 1. javac将.java文件编译为字节码.class文件
 2. java启动JVM，JVM执行.class文件
 3. JVM转换.class为机器码，调用核心类库
