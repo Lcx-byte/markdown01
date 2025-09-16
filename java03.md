@@ -123,8 +123,8 @@ import java.util.Scanner;
 public class java031{
    public static void main(String[] args) {
       Scanner input = new Scanner(System.in);
-      Student xiaoming = new Student();
-      Student xiaohong = new Student();
+      Student xiaoming = new Student();//创建小明对象
+      Student xiaohong = new Student();//创建小红对象
       xiaoming.name = "xiaoming";
       xiaohong.name = "xiaohong";
       xiaoming.map = new HashMap<>();
@@ -137,22 +137,22 @@ public class java031{
          System.out.print("错题数：");
          int num = input.nextInt();
          if(name.equals(xiaoming.name)){
-            xiaoming.mapadd(subject, num);
+            xiaoming.mapadd(subject, num);//调用方法
             System.out.println("小明错题"+xiaoming.map);
          }
          if(name.equals(xiaohong.name)){
-            xiaohong.mapadd(subject, num);
+            xiaohong.mapadd(subject, num);//调用方法
             System.out.println("小红错题"+xiaohong.map);
          }
          else{
-            System.out.println("错误名字");
+            System.out.println("错误名字");//输入的名字不是xiaoming或xiaohong
          }
       }
    }
-   public static class Student{
-      String name;
-      Map<String,Integer> map;
-      public void mapadd(String subject,int count){
+   public static class Student{//建立Student类
+      String name;//属性name
+      Map<String,Integer> map;//属性：map
+      public void mapadd(String subject,int count){//方法：添加新错题
          if(map.containsKey(subject)){
             int num0 = map.get(subject);
             int num1 = num0 + count;
